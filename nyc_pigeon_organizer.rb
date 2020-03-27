@@ -22,8 +22,9 @@ end
 def nyc_pigeon_organizer(data)
   # write your code here!
   pidgeon_names = Hash.new
-  data[:gender][:male].each { |name| pidgeon_names[name] = {} }
-  data[:gender][:female].each { |name| pidgeon_names[name] = {} }
+  name_keys = []
+  data[:gender][:male].each { |name| name_keys << name }
+  data[:gender][:female].each { |name| name_keys << name }
     
   
   name_keys = pidgeon_names.keys
