@@ -20,16 +20,9 @@ end
 def nyc_pigeon_organizer(data)
   # write your code here!
   pidgeon_names = {}
-  data[:gender][:male].each do |name|
-    pidgeon_names << {
-      name => {}
-    }
-  end
-  data[:gender][:female].each do |name|
-    pidgeon_names << {
-      name => {}
-    }
-  end
+  data[:gender][:male].each { |name| pidgeon_names[name] = {} }
+  data[:gender][:female].each { |name| pidgeon_names[name] = {} }
+    
   
   name_keys = pidgeon_names.keys
   name_keys.each do |name|
