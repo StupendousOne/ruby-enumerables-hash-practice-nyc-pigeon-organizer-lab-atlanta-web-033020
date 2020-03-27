@@ -2,7 +2,7 @@ def loop_and_add(data, name)
   new_array = []
   key_array = data.keys
   key_array.each do |key|
-    new_array << key.to_s if data[key].includes?(name)
+    new_array << key.to_s if data[key].include?(name)
   end
   new_array
 end
