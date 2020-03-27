@@ -2,7 +2,7 @@ def loop_and_add(data, name)
   new_array = []
   key_array = data.keys
   key_array.each do |key|
-    new_array << key.to_s if data[key].
+    new_array << key.to_s if data[key].includes?(name)
   end
   new_array
 end
@@ -35,9 +35,6 @@ def nyc_pigeon_organizer(data)
   name_keys.each do |name|
     pidgeon_names[name] = add_data_to_name(data, pidgeon_names, name)
   end
-  
-  
-  
   
   pidgeon_names
 end
