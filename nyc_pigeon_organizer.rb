@@ -21,7 +21,7 @@ end
 
 def nyc_pigeon_organizer(data)
   # write your code here!
-  pidgeon_names = {}
+  pidgeon_names = Hash.new
   data[:gender][:male].each { |name| pidgeon_names[name] = {} }
   data[:gender][:female].each { |name| pidgeon_names[name] = {} }
     
