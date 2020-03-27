@@ -28,6 +28,7 @@ def nyc_pigeon_organizer(data)
   
   name_keys = pidgeon_names.keys
   name_keys.each do |name|
+    name_data = add_data_to_name(data, pidgeon_names[name], name)
     pidgeon_names[name] = add_data_to_name(data, pidgeon_names, name)
   end
   
