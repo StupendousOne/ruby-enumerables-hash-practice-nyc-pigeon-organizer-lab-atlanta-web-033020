@@ -4,7 +4,6 @@ def loop_and_add(data, name)
   key_array.each do |key|
     new_array << key.to_s if data[key].include?(name)
   end
-  pp new_array
   new_array
 end
 
@@ -14,6 +13,8 @@ def add_data_to_name(old_data, new_data, name)
   new_hash[name][:color] = loop_and_add(old_data[:color], name)
   new_hash[name][:gender] = loop_and_add(old_data[:gender], name)
   new_hash[name][:lives] = loop_and_add(old_data[:lives], name)
+  
+  pp new_hash
   
   new_hash
 end
