@@ -25,9 +25,7 @@ def nyc_pigeon_organizer(data)
   name_keys = []
   data[:gender][:male].each { |name| name_keys << name }
   data[:gender][:female].each { |name| name_keys << name }
-    
   
-  name_keys = pidgeon_names.keys
   name_keys.each do |name|
     name_data = add_data_to_name(data, pidgeon_names[name], name)
     pidgeon_names[name] = add_data_to_name(data, pidgeon_names, name)
