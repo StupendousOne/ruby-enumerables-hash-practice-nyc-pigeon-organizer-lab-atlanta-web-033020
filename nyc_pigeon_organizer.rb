@@ -1,3 +1,15 @@
+def build_structure(name_array)
+  new_hash = Hash.new
+  name_array.each do |name| 
+    new_hash[name] = {
+      color: [],
+      gender: [],
+      lives: []
+    }
+  end
+  new_hash
+end
+
 def loop_and_add(data, name)
   new_array = []
   key_array = data.keys
@@ -21,10 +33,12 @@ end
 
 def nyc_pigeon_organizer(data)
   # write your code here!
-  pidgeon_names = Hash.new
+  
   name_keys = []
   data[:gender][:male].each { |name| name_keys << name }
   data[:gender][:female].each { |name| name_keys << name }
+  
+  pidgeon_names = build_structure(name_keys)
   
   name_keys.each do |name|
     name_data = add_data_to_name(data, pidgeon_names[name], name)
