@@ -39,12 +39,12 @@ def nyc_pigeon_organizer(data)
   pidgeon_names = build_structure(name_keys)
   
   name_keys.each do |name|
-    pp name
+    #pp name
     name_data = add_data_to_name(data, pidgeon_names[name], name)
-    pp name_data
+    #pp name_data
     pidgeon_names[name] = name_data
-    pp pidgeon_names[name]
-    puts " "
+    #pp pidgeon_names[name]
+    #puts " "
   end
   
   pidgeon_names
