@@ -4,6 +4,7 @@ def loop_and_add(data, name)
   key_array.each do |key|
     new_array << key.to_s if data[key].include?(name)
   end
+  pp new_array
   new_array
 end
 
