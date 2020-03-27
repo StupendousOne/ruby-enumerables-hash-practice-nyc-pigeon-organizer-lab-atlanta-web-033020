@@ -36,15 +36,15 @@ def nyc_pigeon_organizer(data)
   data[:gender][:male].each { |name| name_keys << name }
   data[:gender][:female].each { |name| name_keys << name }
   
-  pp name_keys
-  
   pidgeon_names = build_structure(name_keys)
   
-  pp pidgeon_names
-  
   name_keys.each do |name|
+    pp name
     name_data = add_data_to_name(data, pidgeon_names[name], name)
-    pidgeon_names[name] = add_data_to_name(data, pidgeon_names, name)
+    pp name_data
+    pidgeon_names[name] = name_data
+    pp pidgeon_names[name]
+    puts " "
   end
   
   pidgeon_names
