@@ -10,9 +10,9 @@ end
 def add_data_to_name(old_data, new_data, name)
   new_hash = new_data
   
-  new_hash[name][:color] = loop_and_add(old_data[:color], name)
-  new_hash[name][:gender] = loop_and_add(old_data[:gender], name)
-  new_hash[name][:lives] = loop_and_add(old_data[:lives], name)
+  new_hash[:color] = loop_and_add(old_data[:color], name)
+  new_hash[:gender] = loop_and_add(old_data[:gender], name)
+  new_hash[:lives] = loop_and_add(old_data[:lives], name)
   
   pp new_hash
   
